@@ -1,0 +1,108 @@
+@import "./css/_reset.scss";
+
+
+.container {
+    &__wrapper{
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.calculator {
+    width: 352px;
+    background: $black;
+    padding: 88px 19px 36px;
+    border-radius: 40px;
+
+    &__display {
+        width: 100%;
+        text-align: right;
+    }
+
+    &__display-input {
+        width: 100%;
+        background: transparent;
+        outline: transparent;
+        border: 0;
+        color: $white;
+        font-size: calculator-rem(48);
+        margin-bottom: 88px;
+        text-align: right;
+    }
+
+    &__display-result {
+        color: $light-grey;
+        font-size: calculator-rem(48);
+        margin-bottom: 20px;
+    }
+
+    &__call {
+        margin-bottom: 20px;
+        width: 24px;
+        height: 24px;
+    }
+
+    &__divide-line {
+        width: 352px;
+        height: 1px;
+        background-color: $background;
+        margin-bottom: 25px;
+    }
+    
+    &__buttons {
+        &--button {
+            background: $grey;
+            color: $white;
+            width: 73px;
+            height: 75px;
+            border-radius: 9px;
+            font-size: calculator-rem(36);
+            border: 0; 
+
+            &:hover {
+                background: lighten($grey, 30%);
+            }
+        
+        }
+    
+        &--button-background-red {
+            background-color: $red;
+            text-transform: uppercase;
+            color: $grey;
+
+            &:hover {
+                background-color: lighten($red, 20%);
+            }
+        }
+
+        &--button-color-green {
+            color: $green;
+        }
+
+        &--button-color-green-small {
+            color: $green;
+            font-size: calculator-rem(24);
+        }
+
+        &--button-background-green {
+            background-color: $green;
+            color: $grey;
+
+            &:hover {
+                background-color: lighten($green, 20%);
+            }
+        }
+
+        &--button-color-grey {
+            color: $grey;
+        }
+        
+    }
+    &__buttons-wrapper {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
